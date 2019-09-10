@@ -1,4 +1,4 @@
-# beatrice
+# beatrice (WIP!)
 A simple static blog generator written in Go.
 
 ### todo
