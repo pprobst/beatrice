@@ -4,9 +4,9 @@ import (
 	"bufio"
 	"fmt"
 	"github.com/pprobst/beatrice/src/config"
+	"html/template"
 	"os"
 	"path/filepath"
-    "html/template"
 )
 
 func getTemplate(path string) (*template.Template, error) {
@@ -49,25 +49,25 @@ func GenerateIndexHTML(cfg *config.Config, posts []*Post) error {
 }
 
 func GeneratePostsHTML(cfg *config.Config, posts []*Post) error {
-    tmplPath := filepath.Join("static", "post_tmpl.html")
+	tmplPath := filepath.Join("static", "post_tmpl.html")
 	tmpl, _ := getTemplate(tmplPath)
 
-    for _, post := range posts {
-        filePath := filepath.Join("static", post.Filename + ".html")
-        f, err := os.Create(filePath)
-        if err != nil {
-            return fmt.Errorf("ERROR creating file %s: %v", filePath, err)
-        }
-        defer f.Close()
+	for _, post := range posts {
+		filePath := filepath.Join("static", post.Filename+".html")
+		f, err := os.Create(filePath)
+		if err != nil {
+			return fmt.Errorf("ERROR creating file %s: %v", filePath, err)
+		}
+		defer f.Close()
 
-        w := bufio.NewWriter(f)
+		w := bufio.NewWriter(f)
 
-        if err := tmpl.Execute(w, post); err != nil {
-            return fmt.Errorf("ERROR executing template %s: %v", filePath, err)
-        }
-        if err := w.Flush(); err != nil {
-            return fmt.Errorf("ERROR writing file %s: %v", filePath, err)
-        }
-    }
+		if err := tmpl.Execute(w, post); err != nil {
+			return fmt.Errorf("ERROR executing template %s: %v", filePath, err)
+		}
+		if err := w.Flush(); err != nil {
+			return fmt.Errorf("ERROR writing file %s: %v", filePath, err)
+		}
+	}
 	return nil
 }

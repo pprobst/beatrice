@@ -1,9 +1,9 @@
 package config
 
 import (
-    "fmt"
-    "io/ioutil"
-    yaml "gopkg.in/yaml.v2"
+	"fmt"
+	yaml "gopkg.in/yaml.v2"
+	"io/ioutil"
 )
 
 // Struct to hold the configuration info defined in config.yml.
@@ -13,8 +13,8 @@ type Config struct {
 	Author      string
 	Contact     string
 	Footer      string
-    Theme       string
-    Posts       string
+	Theme       string
+	Posts       string
 }
 
 // Reads config.yml and "unamrshals" the data.

@@ -1,15 +1,15 @@
 package generator
 
 import (
-    "html/template"
 	"fmt"
+	"github.com/pprobst/beatrice/src/config"
+	"gopkg.in/russross/blackfriday.v2"
 	yaml "gopkg.in/yaml.v2"
-    "github.com/pprobst/beatrice/src/config"
+	"html/template"
 	"io/ioutil"
 	"path/filepath"
 	"sort"
-    "gopkg.in/russross/blackfriday.v2"
-    "strings"
+	"strings"
 )
 
 type Post struct {
@@ -18,9 +18,9 @@ type Post struct {
 	Date      string
 	Tags      []string
 	Filename  string
-    Body      template.HTML  
-    Theme     string
-    BlogTitle string
+	Body      template.HTML
+	Theme     string
+	BlogTitle string
 }
 
 func GetPosts(cfg *config.Config) []*Post {
@@ -62,21 +62,21 @@ func readMarkdownFile(filename string, cfg *config.Config) (*Post, error) {
 		return nil, fmt.Errorf("ERROR parsing markdown file: %v", err)
 	}
 
-    filename = strings.Split(filename, ".")[0]
+	filename = strings.Split(filename, ".")[0]
 	lines := strings.Split(string(data), "\n")
-    var idx int
-    for i := 0; i < len(lines); i++ {
-        if lines[i] == "---" && i > 0 {
-            idx = i
-            break 
-        }
-    }
-    body := strings.Join(lines[idx+1:len(lines)], "\n")
+	var idx int
+	for i := 0; i < len(lines); i++ {
+		if lines[i] == "---" && i > 0 {
+			idx = i
+			break
+		}
+	}
+	body := strings.Join(lines[idx+1:len(lines)], "\n")
 
-    pst.Filename = filename
-    pst.Body = template.HTML(blackfriday.Run([]byte(body)))
-    pst.BlogTitle = cfg.Title
-    pst.Theme = cfg.Theme
+	pst.Filename = filename
+	pst.Body = template.HTML(blackfriday.Run([]byte(body)))
+	pst.BlogTitle = cfg.Title
+	pst.Theme = cfg.Theme
 
 	return &pst, nil
 }

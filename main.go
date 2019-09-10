@@ -8,8 +8,8 @@ import (
 
 func main() {
 	cfg, _ := config.ReadConfig()
-    posts := generator.GetPosts(cfg);
+	posts := generator.GetPosts(cfg)
 
 	generator.GenerateIndexHTML(cfg, posts)
-    generator.GeneratePostsHTML(cfg, posts)
+	generator.GeneratePostsHTML(cfg, posts)
 }
