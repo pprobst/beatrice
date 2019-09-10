@@ -1,0 +1,6 @@
+# Your blog's configuration file.
+title: 'Battler is a crybaby!'
+description: '"A blog about my hate for Battler."'
+author: 'Furudo Erika'
+contact: 'furudo@erika.net'
+theme: 'dark.css'

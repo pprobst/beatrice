@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{{.BlogTitle}}</title>
+        <meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="favicon.png" type="image/png">
+        <link href="{{.Theme}}" rel="stylesheet" type="text/css"></head>
+    <body>
+        <h1 class="title">{{.BlogTitle}}</h1>
+        <p id="descr">{{.Descr}}</p>
+        <p class="nav"><a href="about">>> {{.Author}}</a></p>
+        <hr>
+        <table summary="posts">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>title</th>
+                    <th>date</th>
+                    <th>subjects</th>
+                    <tbody>
+                        {{range .Posts}}
+                        <tr>
+                            <td>{{.Number}}</td>
+                            <td><a href={{.Filename}}{{".html"}}>{{.Title}}</a></td>
+                            <td><samp>{{.Date}}</samp></td>
+                            <td><samp>{{slice .Tags}}</samp></td>
+                        </tr>
+                        {{end}}
+                    </tbody>
+                </tr>
+            </thead>
+        </table>
+        </hr>
+        <hr>
+        <p class="footer">made with <a href="https://github.com/pprobst/beatrice">beatrice</a></p>
+        </hr>
+</body>
+</html>
