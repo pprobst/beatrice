@@ -9,7 +9,7 @@
     <body>
         <h1 class="title">{{.BlogTitle}}</h1>
         <p id="descr">{{.Descr}}</p>
-        <p class="nav"><a href="about">>> {{.Author}}</a></p>
+        <p class="nav"><a href={{.About.Filename}}{{".html"}}>>> {{.Author}}</a></p>
         <hr>
         <table summary="posts">
             <thead>

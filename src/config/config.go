@@ -11,7 +11,6 @@ type Config struct {
 	Title       string
 	Description string
 	Author      string
-	Contact     string
 	Footer      string
 	Theme       string
 	Posts       string

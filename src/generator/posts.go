@@ -28,7 +28,7 @@ func GetPosts(cfg *config.Config) []*Post {
 	markdownFiles := getMarkdownFiles("posts")
 
 	for _, file := range markdownFiles {
-		pst, _ := readMarkdownFile(file, cfg)
+		pst, _ := readMarkdownFile(file, "posts", cfg)
 		posts = append(posts, pst)
 	}
 
@@ -39,18 +39,27 @@ func GetPosts(cfg *config.Config) []*Post {
 	return posts
 }
 
+// The about file is like a post.
+func GetAbout(cfg *config.Config) *Post {
+    aboutFile := getMarkdownFiles("about")[0]
+    file, _ := readMarkdownFile(aboutFile, "about", cfg)
+    return file
+}
+
 func getMarkdownFiles(path string) []string {
 	var filenames []string
 	filesInfo, _ := ioutil.ReadDir(path)
 	for _, file := range filesInfo {
-		filenames = append(filenames, file.Name())
+        if filepath.Ext(file.Name()) == ".md" {
+            filenames = append(filenames, file.Name())
+        }
 	}
 
 	return filenames
 }
 
-func readMarkdownFile(filename string, cfg *config.Config) (*Post, error) {
-	path := filepath.Join("posts", filename)
+func readMarkdownFile(filename string, folder string, cfg *config.Config) (*Post, error) {
+	path := filepath.Join(folder, filename)
 	data, err := ioutil.ReadFile(path)
 
 	if err != nil {
