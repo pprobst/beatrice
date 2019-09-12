@@ -41,18 +41,18 @@ func GetPosts(cfg *config.Config) []*Post {
 
 // The about file is like a post.
 func GetAbout(cfg *config.Config) *Post {
-    aboutFile := getMarkdownFiles("about")[0]
-    file, _ := readMarkdownFile(aboutFile, "about", cfg)
-    return file
+	aboutFile := getMarkdownFiles("about")[0]
+	file, _ := readMarkdownFile(aboutFile, "about", cfg)
+	return file
 }
 
 func getMarkdownFiles(path string) []string {
 	var filenames []string
 	filesInfo, _ := ioutil.ReadDir(path)
 	for _, file := range filesInfo {
-        if filepath.Ext(file.Name()) == ".md" {
-            filenames = append(filenames, file.Name())
-        }
+		if filepath.Ext(file.Name()) == ".md" {
+			filenames = append(filenames, file.Name())
+		}
 	}
 
 	return filenames

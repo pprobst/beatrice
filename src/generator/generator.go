@@ -28,18 +28,18 @@ func GenerateIndexHTML(cfg *config.Config, posts *[]*Post) error {
 	}
 	defer f.Close()
 
-    about := GetAbout(cfg)
+	about := GetAbout(cfg)
 	data := IndexPage{
 		BlogTitle: cfg.Title,
 		Author:    cfg.Author,
 		Posts:     *posts,
-        About:     about,
+		About:     about,
 		Theme:     cfg.Theme,
 		Descr:     cfg.Description,
 	}
 
-    // about is treated like a post; it'll be generated like the others
-    *posts = append(*posts, about)
+	// about is treated like a post; it'll be generated like the others
+	*posts = append(*posts, about)
 
 	w := bufio.NewWriter(f)
 
