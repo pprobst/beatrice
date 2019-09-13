@@ -1,10 +1,14 @@
 body {
   margin: auto;
   width: 50%;
-  background-color: #18191A;
-  color: #C2C5C6;
+  background-color: #F7F3EE;
+  color: #E8A5A8;
   font-family: serif;
   font-size: 120%;
+}
+
+p, li {
+  color: #666666;
 }
 
 .title {
@@ -16,7 +20,7 @@ body {
 
 #descr, #date {
   text-align: center;
-  color: #999D9E;
+  color: #767573;
   word-wrap: break-word;
   font-style: italic;
 }
@@ -42,7 +46,7 @@ p.nav {
 }
 
 a, a:visited, a:active {
-  color: #4A7596;
+  color: #88AECC;
   text-decoration: none;
 }
 
@@ -80,11 +84,11 @@ td samp {
 }
 
 tr:nth-child(odd) {
-  background: #202124;
+  background: #F0EAE3;
 }
 
 tr:hover {
-  background-color: #2D2F30;
+  background-color: #E2DCD4;
 }
 
 div.content {
