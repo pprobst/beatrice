@@ -29,6 +29,10 @@ inside the directory where ```main.go``` is located and then try running
 
 ---
 
+### Inspirations
+* [YASBE](https://github.com/underr/yasbe/)
+* [zupzup's blog generator](https://github.com/zupzup/blog-generator)
+
 #### Todo
 * Better error handling, maybe.
 * Umm...
