@@ -1,10 +1,10 @@
 # beatrice
 A simple static blog generator written in Go.
 
+https://beatrice-example.surge.sh/
+
 ### Installation
 ```go get github.com/pprobst/beatrice```
-
-https://beatrice-example.surge.sh/
 
 ### How do I even...?
 After "getting" the package, you can initially configure your blog by editing
