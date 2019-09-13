@@ -4,6 +4,8 @@ A simple static blog generator written in Go.
 ### Installation
 ```go get github.com/pprobst/beatrice```
 
+https://beatrice-example.surge.sh/
+
 ### How do I even...?
 After "getting" the package, you can initially configure your blog by editing
 the file ```config.yml```. It comes with some pre-defined configs just as an
