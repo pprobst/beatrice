@@ -18,7 +18,7 @@ func getTemplate(path string) (*template.Template, error) {
 }
 
 func GenerateIndexHTML(cfg *config.Config, posts *[]*Post) error {
-	tmplPath := filepath.Join("static", "index_tmpl.html")
+	tmplPath := filepath.Join("static/templates", "index_tmpl.html")
 	tmpl, _ := getTemplate(tmplPath)
 
 	filePath := filepath.Join("static", "index.html")
@@ -54,7 +54,7 @@ func GenerateIndexHTML(cfg *config.Config, posts *[]*Post) error {
 }
 
 func GeneratePostsHTML(cfg *config.Config, posts []*Post) error {
-	tmplPath := filepath.Join("static", "post_tmpl.html")
+	tmplPath := filepath.Join("static/templates", "post_tmpl.html")
 	tmpl, _ := getTemplate(tmplPath)
 
 	for _, post := range posts {
