@@ -100,3 +100,9 @@ p.footer {
   background: transparent;
   text-align: center;
 }
+
+img {
+  max-height: 500px;
+  height: 70%;
+  width: auto;
+}
