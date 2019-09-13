@@ -11,10 +11,10 @@ example.
 
 There're mainly two directories you'll work with: ```about``` and ```posts```. 
 
-```about``` will hold a markdown file regarding youself, while ```posts```
+```about``` will hold a markdown file regarding yourself, while ```posts```
 will, of course, hold your posts' markdown files. You can get started by
 looking at the pre-defined files; get used at how the header in each file must
-be written, and then... have some fun writing your own posts.
+be written, and then... have some fun writing your own posts!
 
 ### Running
 
