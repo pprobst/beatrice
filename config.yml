@@ -2,4 +2,4 @@
 title: 'Battler is a crybaby!'
 description: '"A blog about my hate for Battler."'
 author: 'Furudo Erika'
-theme: 'dark.css'
+theme: 'dark.css' # or 'light.css'
