@@ -34,4 +34,4 @@ inside the ```static``` directory.
 
 #### Todo
 * Better error handling, maybe.
-* Umm...
+* Dedicated directory for images.
