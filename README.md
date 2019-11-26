@@ -6,8 +6,10 @@ https://beatrice-example.surge.sh/
 ### Installation
 ```go get github.com/pprobst/beatrice```
 
+Or just download this repository and run ```go build``` or ```go install```.
+
 ### How do I even...?
-After "getting" the package, you can initially configure your blog by editing
+After "getting" the package/repo, you can initially configure your blog by editing
 the file ```config.yml```. It comes with some pre-defined configs just as an
 example.
 
@@ -20,12 +22,9 @@ be written, and then... have some fun writing your own posts!
 
 ### Running
 
-When you're ready, just run ```beatrice```. The generated files will be
+When you're ready, just run ```beatrice```. If everything went right, 
+the message ```Fin.``` will be displayed. The generated files will be
 inside the ```static``` directory. 
-
-If just running ```beatrice``` didn't work for some reason, try ```go install``` 
-inside the directory where ```main.go``` is located and then try running
-```beatrice``` again.
 
 ---
 
