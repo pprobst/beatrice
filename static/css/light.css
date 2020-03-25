@@ -45,7 +45,7 @@ p.nav {
 }
 
 a, a:visited, a:active {
-  color: #88AECC;
+  color: #7EA2BD;
   text-decoration: none;
 }
 
@@ -63,7 +63,7 @@ table {
 }
 
 th {
-  color: #818485;
+  color: #525354;
   padding: 0.1em 0.5em;
   font-family: "Iosevka";
   font-weight: normal;
@@ -84,6 +84,10 @@ td samp {
 
 tr:nth-child(odd) {
   background: #F0EAE3;
+}
+
+tr td {
+  color: #818485;
 }
 
 tr:hover {
