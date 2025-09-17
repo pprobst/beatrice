@@ -1,9 +1,8 @@
 module github.com/pprobst/beatrice
 
-go 1.13
+go 1.22
 
 require (
-	github.com/shurcooL/sanitized_anchor_name v1.0.0 // indirect
-	gopkg.in/russross/blackfriday.v2 v2.0.0
-	gopkg.in/yaml.v2 v2.2.7
+	github.com/russross/blackfriday/v2 v2.1.0
+	gopkg.in/yaml.v2 v2.4.0
 )

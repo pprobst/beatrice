@@ -1,5 +1,5 @@
 # Your blog's configuration file.
-title: 'Battler is a crybaby!'
-description: '"A blog about my hate for Battler."'
-author: 'Furudo Erika'
-theme: 'dark' # or 'light'
+title: 'Test Blog'
+description: '"A test blog."'
+author: 'pprobst'
+theme: 'light' # or 'light'
