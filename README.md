@@ -1,23 +1,8 @@
 # Beatrice
 
-A modern, secure, and feature-rich static blog generator written in Go.
-
-[![Go Version](https://img.shields.io/badge/go-1.22+-blue.svg)](https://golang.org)
-[![Tests](https://img.shields.io/badge/tests-passing-green.svg)](https://github.com/pprobst/beatrice)
+A barebones static blog generator written in Go.
 
 https://beatrice-example.surge.sh/
-
-## Features
-
-- 🚀 **Fast Generation**: Generate static HTML from Markdown in seconds
-- 🔒 **Secure**: Input validation, path sanitization, and HTML escaping
-- 🎨 **Themes**: Built-in light and dark themes
-- 📱 **Responsive**: Mobile-friendly design
-- ⚡ **Modern Go**: Updated to Go 1.21 with latest dependencies
-- 🧪 **Well Tested**: Comprehensive unit test coverage
-- 📝 **Rich Logging**: Structured logging with configurable verbosity
-- ⚙️ **CLI Options**: Flexible configuration via command-line flags
-- 🛡️ **Validation**: Built-in validation for config and content
 
 ## Installation
 
@@ -86,12 +71,6 @@ Options:
 
 # Generate to custom output directory
 ./beatrice -output dist/
-
-# Enable verbose logging
-./beatrice -verbose
-
-# Combine options
-./beatrice -config blog.yml -output public/ -verbose
 ```
 
 ## Configuration
@@ -140,11 +119,9 @@ beatrice/
 ├── src/
 │   ├── config/
 │   │   ├── config.go          # Configuration loading and validation
-│   │   └── config_test.go     # Unit tests for config
 │   └── generator/
 │       ├── generator.go       # HTML generation with template validation
 │       ├── posts.go           # Markdown processing and validation
-│       ├── posts_test.go      # Unit tests for posts
 │       └── index.go           # Index page data structures
 ├── posts/                     # Markdown blog posts
 ├── about/                     # About page content
@@ -153,28 +130,6 @@ beatrice/
 │   ├── css/                   # Stylesheets
 │   └── *.html                 # Generated pages
 └── go.mod                     # Go module dependencies
-```
-
-## Development
-
-### Running Tests
-
-```bash
-# Run all tests
-go test ./...
-
-# Run tests with coverage
-go test -cover ./...
-
-# Run specific package tests
-go test ./src/config
-go test ./src/generator
-```
-
-### Building
-
-```bash
-go build
 ```
 
 ### Inspirations
