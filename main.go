@@ -1,8 +1,4 @@
 // Package main provides the CLI interface for the Beatrice static blog generator.
-//
-// Beatrice is a modern, secure static blog generator that converts Markdown files
-// into HTML pages. It features comprehensive error handling, input validation,
-// and flexible configuration options.
 package main
 
 import (
