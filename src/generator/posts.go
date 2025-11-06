@@ -35,10 +35,6 @@ func (p *Post) Validate() error {
 	if p.Date == "" {
 		return fmt.Errorf("post date is required")
 	}
-	// Basic date format validation
-	if len(p.Date) != 10 || p.Date[4] != '-' || p.Date[7] != '-' {
-		return fmt.Errorf("post date must be in YYYY-MM-DD format")
-	}
 	return nil
 }
 

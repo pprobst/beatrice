@@ -25,9 +25,6 @@ func (c *Config) Validate() error {
 	if c.Author == "" {
 		return fmt.Errorf("author is required in config.yml")
 	}
-	if c.Theme != "light" && c.Theme != "dark" {
-		return fmt.Errorf("theme must be 'light' or 'dark', got '%s'", c.Theme)
-	}
 	return nil
 }
 
